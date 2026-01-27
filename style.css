@@ -474,6 +474,10 @@ button {
   }
 }
 
+.footer-legal{
+  padding: 12px 25px 120px; /* arriba/derecha-izquierda/abajo */
+}
+
 
 
 
