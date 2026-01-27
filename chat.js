@@ -4,7 +4,11 @@ const chatContainer = document.getElementById("chat-container");
 
 chatToggle.addEventListener("click", () => {
   chatContainer.classList.toggle("active");
+
+  // ✅ agrega esta línea
+  document.body.classList.toggle("chat-open", chatContainer.classList.contains("active"));
 });
+
 
 // Enviar mensaje
 function sendMessage() {
@@ -64,3 +68,4 @@ function getAutoReply(input) {
 
   return "Para consultas, puedes escribirnos a danielconstructornaval@gmail.com o llamarnos al +56 9 6815 2504.";
 }
+
