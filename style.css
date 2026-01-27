@@ -14,14 +14,14 @@ header {
 }
 
 .logo {
-  width: 300px;
+  width: 300px;            /* antes 100px — ahora más grande */
   border-radius: 50%;
   margin-bottom: 10px;
   transition: transform 0.3s ease;
 }
 
 .logo:hover {
-  transform: scale(1.05);
+  transform: scale(1.05);  /* efecto suave al pasar el mouse */
 }
 
 /* MENÚ */
@@ -35,17 +35,18 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 22px;
+  gap: 22px;              /* separación entre botones */
 }
 
 nav ul li {
-  margin: 0;
+  margin: 0;              /* ya no se usa margin aquí */
 }
 
-nav a {
+nav a{
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -174,7 +175,7 @@ h2 {
   transform: scale(1.03);
 }
 
-/* PIE DE PÁGINA */
+/* PIE DE PÁGINA (genérico, si lo usas en otras páginas) */
 footer {
   text-align: center;
   background-color: #0b3d91;
@@ -219,6 +220,36 @@ footer {
   display: block;
 }
 
+#chat-box {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+}
+
+#messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  font-size: 14px;
+}
+
+#user-input {
+  border: none;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  outline: none;
+  width: calc(100% - 70px);
+}
+
+button {
+  background-color: #0b3d91;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 0 0 8px 8px;
+  cursor: pointer;
+}
+
 /* BOTÓN VOLVER ARRIBA */
 #btnArriba {
   display: none;
@@ -226,18 +257,24 @@ footer {
   bottom: 25px;
   right: 95px;
   z-index: 99;
+
   width: 46px;
   height: 46px;
-  background-color: #0b3d91;
+
+  background-color: #0b3d91;   /* azul institucional */
   color: white;
-  border: 2px solid #b88b4a;
+
+  border: 2px solid #b88b4a;   /* dorado fino */
   border-radius: 10%;
+
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   box-shadow: 0 6px 14px rgba(0,0,0,0.25);
   transition: all 0.3s ease;
 }
@@ -290,7 +327,7 @@ footer {
   transition: all 0.4s ease;
 }
 
-/* ZOOM GALERÍA */
+/* ZOOM DE GALERÍA CON FLECHAS Y AJUSTE COMPLETO */
 #modalZoom {
   display: none;
   position: fixed;
@@ -304,7 +341,70 @@ footer {
   align-items: center;
 }
 
-/* WHATSAPP */
+.modal-contenido {
+  position: relative;
+  max-width: 95%;
+  max-height: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: zoomIn 0.4s ease;
+}
+
+#imagenZoom {
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+  object-fit: contain;
+}
+
+#cerrarZoom {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  padding: 5px 12px;
+  transition: background 0.3s;
+}
+
+#cerrarZoom:hover {
+  background: #b88b4a;
+}
+
+/* Flechas */
+.flecha {
+  position: absolute;
+  top: 50%;
+  color: white;
+  font-size: 45px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  padding: 10px 18px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  transition: background 0.3s;
+  transform: translateY(-50%);
+}
+
+#anterior { left: 20px; }
+#siguiente { right: 20px; }
+
+.flecha:hover {
+  background: #b88b4a;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
 .whatsapp-float {
   position: fixed;
   right: 20px;
@@ -321,27 +421,29 @@ footer {
   box-shadow: 0 8px 18px rgba(0,0,0,0.25);
 }
 
-/* MAPA */
 .mapa {
   margin-top: 30px;
   display: flex;
-  justify-content: center;
+  justify-content: center;   /* 👈 centra horizontal */
 }
 
 .mapa iframe {
-  width: 80%;
-  max-width: 800px;
+  width: 80%;                /* 👈 tamaño centrado */
+  max-width: 800px;          /* 👈 no se pasa de ancho */
   height: 350px;
   border: 0;
   border-radius: 15px;
   box-shadow: 0 8px 18px rgba(0,0,0,0.2);
 }
 
-/* FOOTER LEGAL */
+/* ===================== */
+/* FOOTER DEL SITIO (TUYO) */
+/* ===================== */
+
 .footer-legal {
   background-color: #0b3d91;
   color: white;
-  padding: 18px 25px;
+  padding: 18px 25px 140px; /* ✅ ÚNICO AJUSTE: espacio abajo para que NO tapen los botones */
   font-size: 0.95rem;
 }
 
