@@ -411,8 +411,8 @@ button {
   position: fixed;
   right: 20px;
   bottom: 90px;
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   z-index: 9999;
 }
 
@@ -473,6 +473,7 @@ button {
     text-align: center;
   }
 }
+
 
 
 
