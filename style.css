@@ -410,16 +410,16 @@ button {
 .whatsapp-float {
   position: fixed;
   right: 20px;
-  bottom: 120px;
-  width: 52px;
-  height: 52px;
+  bottom: 90px;
+  width: 60px;
+  height: 60px;
   z-index: 9999;
 }
 
 .whatsapp-float img {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
+  border-radius: 45%;
   box-shadow: 0 8px 18px rgba(0,0,0,0.25);
 }
 
@@ -473,6 +473,7 @@ button {
     text-align: center;
   }
 }
+
 
 
 
