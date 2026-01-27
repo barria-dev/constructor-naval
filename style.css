@@ -101,6 +101,7 @@ nav a:hover {
   border: 3px solid #b88b4a;
 }
 
+/* TÍTULO PRINCIPAL */
 .hero-texto h2 {
   color: #cdd9f8;
   font-size: 1.9rem;
@@ -109,6 +110,7 @@ nav a:hover {
   margin-bottom: 15px;
 }
 
+/* PÁRRAFO SECUNDARIO */
 .hero-texto p {
   color: #ffffff;
   font-size: 1.2rem;
@@ -184,7 +186,7 @@ footer {
 /* CHAT */
 #chat-toggle {
   position: fixed;
-  bottom: 40px;
+  bottom: 25px;
   right: 25px;
   background-color: #0b3d91;
   color: white;
@@ -221,7 +223,7 @@ footer {
 #btnArriba {
   display: none;
   position: fixed;
-  bottom: 40px;
+  bottom: 25px;
   right: 95px;
   z-index: 99;
   width: 46px;
@@ -233,16 +235,80 @@ footer {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
+  display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+  transition: all 0.3s ease;
+}
+
+#btnArriba:hover {
+  background-color: #b88b4a;
+  color: #0b3d91;
+  transform: translateY(-3px);
+}
+
+/* FORMULARIO DE CONTACTO */
+#contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#contacto input,
+#contacto textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #b88b4a;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #f7efdf;
+}
+
+#contacto button {
+  margin-top: 10px;
+  background-color: #0b3d91;
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#contacto button:hover {
+  background-color: #b88b4a;
+}
+
+#estadoEnvio {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-style: italic;
+  color: #555;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+/* ZOOM GALERÍA */
+#modalZoom {
+  display: none;
+  position: fixed;
+  z-index: 200;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
 }
 
 /* WHATSAPP */
 .whatsapp-float {
   position: fixed;
   right: 20px;
-  bottom: 130px;
+  bottom: 90px;
   width: 60px;
   height: 60px;
   z-index: 9999;
@@ -271,11 +337,11 @@ footer {
   box-shadow: 0 8px 18px rgba(0,0,0,0.2);
 }
 
-/* FOOTER LEGAL – FIX CLAVE */
+/* FOOTER LEGAL */
 .footer-legal {
   background-color: #0b3d91;
   color: white;
-  padding: 18px 25px 180px; /* 👈 ÚNICO CAMBIO */
+  padding: 18px 25px;
   font-size: 0.95rem;
 }
 
@@ -307,11 +373,3 @@ footer {
     text-align: center;
   }
 }
-
-
-
-
-
-
-
-
